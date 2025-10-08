@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom"
-import TextoDescripcionDefault from "../ComponenteTextoPlaceholder"
+import TextoDescripcionDefault from "../texto/ComponenteTextoPlaceholder"
 import ImagenCatalogoSegunda from "../ComponenteImagenCatalogoSecundario"
 export default function CatalogoSecundario() {
 

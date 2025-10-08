@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import TextoDescripcionDefault from "../ComponenteTextoPlaceholder";
+import TextoDescripcionDefault from "../texto/ComponenteTextoPlaceholder";
 export default function ItemCatalogoPrincipal() {
 
     return (

@@ -1,5 +1,5 @@
 import CarroDeCompras from "./carrito/ComponenteCarroDeCompras"
-import ValidacionTop from "./ComponenteValTop"
+import ValidacionTop from "./logica/ComponenteValTop"
 
 export default function Encabezado() {
 

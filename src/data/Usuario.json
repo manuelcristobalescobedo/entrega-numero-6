@@ -1,0 +1,11 @@
+{
+    "id": "de22e8f0-b773-47a7-aec0-7ef5687eae2d",
+    "nombre": "Karla",
+    "apellido": "Robinson",
+    "correo": "robinsonkarla@email.com",
+    "telefono": "+56 9 1234 5678",
+    "fotografia": "https://cdn.com/usuarios/de22e8f0-b773-47a7-aec0-7ef5687eae2d/1.jpg",
+    "registro": "2026-01-03T19:35:00.000Z",
+    "activo": true,
+    "reservas": ["bcdeeb62-8c9d-42b8-89a8-fd4e5fb69936"]
+}

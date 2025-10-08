@@ -1,10 +1,10 @@
 import React from "react"
-import Titulo from "../components/ComponenteTitulo"
+import Titulo from "../components/texto/ComponenteTitulo"
 import Galeria from "../components/ComponenteGaleria"
 import Descripción from "../components/ComponenteDescripcion"
-import Resenas from "../components/ComponenteReseñas"
+import Resenas from "../components/texto/ComponenteReseñas"
 import DisponibilidadCalendario from "../components/ComponenteDisponibilidad"
-import Informacion from "../components/ComponenteInformacion"
+import Informacion from "../components/texto/ComponenteInformacion"
 
 export default function PaginaProducto() {
 

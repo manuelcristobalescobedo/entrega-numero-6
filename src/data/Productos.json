@@ -1,0 +1,49 @@
+{
+    "id": "bcdeeb62-8c9d-42b8-89a8-fd4e5fb69936",
+    "titulo": "Caminata por las lagunas altiplánicas de Piedras Rojas",
+    "ubicacion": "San Pedro de Atacama, Antofagasta",
+    "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+    "imagenes": ["https://cdn.com/productos/bcdeeb62-8c9d-42b8-89a8-fd4e5fb69936/imagenes/1.jpg", "https://cdn.com/productos/bcdeeb62-8c9d-42b8-89a8-fd4e5fb69936/imagenes/2.jpg", "https://cdn.com/productos/bcdeeb62-8c9d-42b8-89a8-fd4e5fb69936/imagenes/3.jpg"],
+    "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
+    "anunciante": "Mauro Lima",
+    "fotografia": "https://cdn.com/productos/bcdeeb62-8c9d-42b8-89a8-fd4e5fb69936/anunciante/1.jpg",
+    "precios": {
+        "adulto": 19990,
+        "estudiante": 14990,
+        "mayor": 9990
+    },
+    "resenas": [
+        {
+            "usuario": "Karla Robinson",
+            "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
+            "estrellas": 5
+        },
+        {
+            "usuario": "Miranda Salzgeber",
+            "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
+            "estrellas": 4
+        },
+        {
+            "usuario": "Marek Piwnicki",
+            "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
+            "estrellas": 5
+        }
+    ],
+    "calendarizacion": {
+        "fechas": ["2026-02-10", "2026-02-11", "2026-02-12"],
+        "horas": ["08:00", "09:00", "11:00"]
+    },
+    "etiquetas": ["En familia", "En pareja", "En grupos pequeños"],
+    "caracteristicas": "La caminata está pensada para principiantes sin experiencia previa en terrenos escabrosos. El recorrido es de baja dificultad, con senderos señalizados y pendientes suaves, ideal para quienes desean disfrutar del altiplano y sus paisajes sin esfuerzo físico extremo.",
+    "informacion": "La actividad tiene una duración aproximada de 3 horas y se recomienda para personas de todas las edades a partir de los 6 años. Las temperaturas suelen oscilar entre 5 °C y 20 °C, con viento frecuente. Se aconseja llevar ropa cómoda, calzado adecuado para caminatas, protector solar, gorro y una botella de agua.",
+    "cancelacion": "El anunciante asegura la devolución completa del valor del servicio hasta 72 horas antes de la fecha y hora programadas, y la devolución de la mitad del valor hasta 48 horas antes de la misma.",
+    "incluye": "El servicio incluye transporte desde el punto de encuentro hasta la ubicación de la actividad, un guía acreditado y certificado en primeros auxilios, y un folleto informativo con un mapa topográfico de la región.",
+    "excluye": "El servicio no incluye transporte hasta el punto de encuentro, alimentos, protector solar, elementos de protección personal o cualquier gasto adicional no especificado.",
+    "personas": {
+        "minimo": 10,
+        "maximo": 20
+    },
+    "registro": "2026-02-01T19:35:00.000Z",
+    "disponibilidad": true,
+    "oferta": false
+}

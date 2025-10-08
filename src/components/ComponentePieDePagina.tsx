@@ -1,4 +1,4 @@
-import TituloDeCategoria from "./ComponenteTituloDeCategoria"
+import TituloDeCategoria from "./texto/ComponenteTituloDeCategoria"
 
 export default function PieDePagina() {
 
