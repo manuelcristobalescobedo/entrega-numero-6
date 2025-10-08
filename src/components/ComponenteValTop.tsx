@@ -87,12 +87,68 @@ function ValidacionTop() {
     };
 
     return (
-        <form className="ComponenteBusquedaPrincipal" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Lugar" value={validacion} onChange={handleChange}></input>
-            <input type="date" placeholder="Fecha" value={validacionFecha} onChange={handleFechaChange}></input>
-            <input type="number" placeholder="Personas" value={validacionNumero} onChange={handleNumeroChange}></input>
-            <button type="submit">
-                <svg xmlns="http://www.w3.org/2000/svg" 
+        <form style={{background: "lightgreen",
+                    fontSize: "1rem",
+                    border: "none",
+                    borderRadius: "15px",
+                    paddingBottom: "0.5rem",
+                    flex: 1,
+                    marginRight: "0.25rem",
+        }}
+        
+            
+            onSubmit={handleSubmit}>
+            <input style={{background: "white",
+                           borderRadius: "10px",
+                           height: "2rem",
+                           width: "15rem",
+                           paddingTop: "0.6rem",
+                           flex: 1,
+                           alignContent: "center",
+                           marginRight: "0.25rem",
+                           color: "gray",
+                           border: "none",
+                           textAlign: "center"}}  
+            type="text" placeholder="Lugar" value={validacion} onChange={handleChange}></input>
+            
+            <input style={{background: "white",  
+                          paddingTop: "0.6rem",
+                          borderRadius: "10px",
+                          height: "2rem",
+                          width: "15rem",
+                          flex: 1,
+                          marginRight: "0.25rem",
+                          color: "gray",
+                          border: "none",
+                          textAlign: "center"}}
+            type="date" placeholder="Fecha" value={validacionFecha} onChange={handleFechaChange}></input>
+
+            <input style={{background: "white",  
+                          paddingTop: "0.6rem",
+                          borderRadius: "10px",
+                          height: "2rem",
+                          width: "15rem",
+                          flex: 1,
+                          marginRight: "0.25rem",
+                          color: "black",
+                          border: "none",
+                          textAlign: "center"}}
+
+            type="number" placeholder="Personas" value={validacionNumero} onChange={handleNumeroChange}></input>
+            <button style={{color: "white",
+                            background: "darkgreen",
+                            cursor: "pointer",
+                            marginLeft: "1rem",
+                            alignContent: "center",
+                            alignItems: "center",
+                            marginTop: "0.5rem"
+            }}
+            
+            type="submit">
+                <svg style={{width: "1.25rem",
+                            height: "1.25rem",
+                }}
+                xmlns="http://www.w3.org/2000/svg" 
                     viewBox="0 -960 960 960" 
                     fill="currentColor">
                     <path d="M762.69-160.92 524.46-399.16q-30 22.77-65.79 35.27-35.79 12.5-73.87 12.5-93.58 0-159.11-65.51-65.53-65.51-65.53-159.04 0-93.52 65.51-159.1 65.51-65.57 159.04-65.57 93.52 0 159.1 65.53 65.57 65.53 65.57 159.11 0 39.23-12.88 75.02-12.89 35.8-34.89 64.64l238.23 238.23-37.15 37.16ZM384.77-403.38q72.31 0 122.46-50.16 50.16-50.15 50.16-122.46t-50.16-122.46q-50.15-50.16-122.46-50.16t-122.46 50.16Q212.15-648.31 212.15-576t50.16 122.46q50.15 50.16 122.46 50.16Z"/>

@@ -1,5 +1,14 @@
+[ 
 { 
     "id": 1,
-    "nombre": "",
-    "precio": ""
+    "nombre": "kayak",
+    "precio": "30.000",
+    "uuid?": "string"
+},
+{ 
+    "id": 2,
+    "nombre": "paddle",
+    "precio": "10.000",
+    "uuid?": "string"
 }
+]

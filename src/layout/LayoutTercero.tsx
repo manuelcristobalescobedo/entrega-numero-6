@@ -1,6 +1,10 @@
 import "../App.css" 
-import { Link } from "react-router-dom" // Como enrutar el layout a través de React Router
+import { Link, Outlet } from "react-router-dom" // Como enrutar el layout a través de React Router
 import FiltrosDeBusqueda from "../component/Filtro"
+import ComponenteEncabezado from "../components/ComponenteEncabezado" 
+import CarritoDeCompras from "../components/carrito/ComponenteTarjetaDeCompras"
+import PieDePagina from "../components/ComponentePieDePagina"
+import PaginaCatalogo from "../pages/PaginaCatalogo"
 
 export default function LayoutTerciario() {
 
@@ -10,16 +14,16 @@ export default function LayoutTerciario() {
                 <ComponenteEncabezado />
             </header>
             <main>
-                <PaginaProducto />
+                <Outlet />
             </main>
             <aside className="ComponenteCarritoDeCompra">
-                <ComponenteCarritoDeCompras />
+                <CarritoDeCompras />
             </aside>
             <aside className="ComponenteProcesoDePago">
-                <ComponenteProcesoDePago />
+                <ProcesoDePago />
             </aside>
             <footer>
-                <ComponentePieDePagina />
+                <PieDePagina />
             </footer>
         </div>
     )

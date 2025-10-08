@@ -1,6 +1,9 @@
 import "../App.css" 
-import { Link } from "react-router-dom" // Como enrutar el layout a través de React Router
-import FiltrosDeBusqueda from "../component/Filtro"
+import { Outlet } from "react-router-dom" // Como enrutar el layout a través de React Router
+import ComponenteEncabezado from "../components/ComponenteEncabezado" 
+import CarritoDeCompras from "../components/carrito/ComponenteTarjetaDeCompras"
+import PieDePagina from "../components/ComponentePieDePagina"
+import FiltrosDeBusqueda from "../components/ComponenteFiltrosDeBusqueda"
 
 export default function LayoutSecundario() {
 
@@ -10,7 +13,7 @@ export default function LayoutSecundario() {
                 <ComponenteEncabezado />
             </header>
             <main>
-                <PaginaCatalogo />
+                <Outlet />
             </main>
             <aside className="ComponenteCarritoDeCompra">
                 <CarritoDeCompras />
@@ -19,7 +22,7 @@ export default function LayoutSecundario() {
                 <FiltrosDeBusqueda />
             </aside>
             <footer>
-                <ComponentePieDePagina />
+                <PieDePagina />
             </footer>
         </div>
     )

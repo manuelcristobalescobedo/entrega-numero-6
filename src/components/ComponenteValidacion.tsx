@@ -45,8 +45,20 @@ function Validacion() {
     //
     return (
         <>
-        <form className="ComponenteBusqueda" onSubmit={handleSubmit}>
-                <input
+        <form style={{ marginBottom: "1rem",
+                       display: "flex",
+                       alignItems: "center"}}
+
+        className="ComponenteBusqueda" onSubmit={handleSubmit}>
+                <input style={{width: "40rem",
+                               textAlign: "center",
+                               background: "white",
+                               color: "gray",
+                               fontSize: "0.9rem",
+                               borderRadius: "6px",
+                               border: "1px solid white",
+                               height: "40px",
+                }}      
                     type="text"
                     placeholder="Buscar"
                     onChange={handleChange}
