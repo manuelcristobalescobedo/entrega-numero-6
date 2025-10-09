@@ -1,4 +1,4 @@
-import type { Producto } from "/home/manuelcristobalescobedo/entrega-numero-6/src/types/Tipos.ts";
+import type { Producto } from "../types/Tipos";
 
 interface Props {
   producto: Producto;

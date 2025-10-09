@@ -5,7 +5,7 @@ interface Props {
 }
 
 export default function Informacion({ producto }: Props) {
-  if (!producto) return <div>Producto no disponible</div>;
+  if (!producto) return <div style={{color: "darkgreen", marginTop: "1rem"}}>Producto no disponible</div>;
 
   return (
     <section

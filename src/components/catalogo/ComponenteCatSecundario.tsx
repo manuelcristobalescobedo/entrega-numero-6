@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom"
 import TextoDescripcionDefault from "../texto/ComponenteTextoPlaceholder"
 import ImagenCatalogoSegunda from "../ComponenteImagenCatalogoSecundario"
+import { productos } from "../../data/Datos";
 export default function CatalogoSecundario() {
 
     return (
@@ -20,23 +21,16 @@ export default function CatalogoSecundario() {
                      columnGap: "1rem",
                      rowGap: "3rem",
         }}>
-            <Link to="/producto">
-                <ImagenCatalogoSegunda />
-                
-                <TextoDescripcionDefault />
-            </Link>
-            <Link to="/producto">
-                <ImagenCatalogoSegunda />
-
-                <TextoDescripcionDefault />
-            </Link>
-            <Link to="/producto">
-                <ImagenCatalogoSegunda />
-                
-                <TextoDescripcionDefault />
-            </Link>
+           
+               {productos.slice(0, 3).map((producto) => (
+                <Link to={`/producto/${producto.id}`} key={producto.id}>
+                    {/* Asumo que quieres una imagen estática aquí, si no, pásale la imagen del producto */}
+                    <ImagenCatalogoSegunda />
+                    <TextoDescripcionDefault producto={producto} />
+                </Link>
+            ))}
         </div>
     </section>
-        </>
+    </> 
     )
 }

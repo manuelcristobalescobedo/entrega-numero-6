@@ -1,6 +1,5 @@
 import "../App.css" 
 import { Outlet } from "react-router-dom"
-import { Link } from "react-router-dom" // Como enrutar el layout a través de React Router
 import Encabezado from "../components/ComponenteEncabezado" 
 import CarritoDeCompras from "../components/carrito/ComponenteTarjetaDeCompras"
 import PieDePagina from "../components/ComponentePieDePagina"
@@ -18,7 +17,7 @@ export default function LayoutPrimario() {
             </main>
             <aside>
                 <CarritoDeCompras />
-                <Filtros />
+                <Filtros /> 
             </aside>
             <footer>
                 <PieDePagina />

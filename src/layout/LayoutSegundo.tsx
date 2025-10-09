@@ -1,9 +1,11 @@
+// no lo estamos usando este layout todavia 
+
 import "../App.css" 
 import { Outlet } from "react-router-dom" // Como enrutar el layout a través de React Router
 import ComponenteEncabezado from "../components/ComponenteEncabezado" 
 import CarritoDeCompras from "../components/carrito/ComponenteTarjetaDeCompras"
 import PieDePagina from "../components/ComponentePieDePagina"
-import FiltrosDeBusqueda from "../components/ComponenteFiltrosDeBusqueda"
+import Filtros from "../components/filtro/ComponenteAbrirFiltros"
 
 export default function LayoutSecundario() {
 
@@ -19,7 +21,7 @@ export default function LayoutSecundario() {
                 <CarritoDeCompras />
             </aside>
             <aside className="ComponenteFiltrosDeBusqueda">
-                <FiltrosDeBusqueda />
+                <Filtros />
             </aside>
             <footer>
                 <PieDePagina />

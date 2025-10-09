@@ -6,7 +6,7 @@ interface Props {
 
 export default function TextoDescripcionDefault({ producto }: Props) {
   // Si producto no está definido, mostramos un mensaje y salimos
-  if (!producto) return <div>Producto no disponible</div>;
+  if (!producto) return <div style={{color: "darkgreen", marginTop: "1rem"}}>Producto no disponible</div>;
 
   // Calcular promedio de estrellas y cantidad de reseñas
   const totalResenas = producto.resenas.length;

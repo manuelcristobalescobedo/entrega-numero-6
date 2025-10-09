@@ -7,7 +7,7 @@ interface Props {
 export default function Resenas({ producto }: Props) {
   return (
     <>
-      <h2>Reseñas</h2>
+      <h2 style={{color: "darkgreen"}}>Reseñas</h2>
       <div
         style={{
           display: "grid",

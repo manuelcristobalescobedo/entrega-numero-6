@@ -10,7 +10,7 @@ export default function CatalogoPrincipal() {
       }}
       className="SeccionCatalogo"
     >
-      <h2 style={{ margin: 0, marginBottom: "1.5rem" }}>
+      <h2 style={{ margin: 0, marginBottom: "1.5rem", color: "darkgreen" }}>
         Título de la sección
       </h2>
 
@@ -27,7 +27,7 @@ export default function CatalogoPrincipal() {
           <ItemCatalogoPrincipal 
             key={producto.id} 
             producto={producto} 
-            productoId={producto.id} // 🔹 Pasamos el id para usar en Link
+            // productoId={producto.id} // 🔹 Pasamos el id para usar en Link
           />
         ))}
       </div>

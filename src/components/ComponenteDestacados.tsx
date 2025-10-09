@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom"
 export default function Destacados() {
 
@@ -31,7 +30,7 @@ export default function Destacados() {
                            marginBottom: "1.5rem"
                 }}>
                     Descripción del ítem destacado</p>
-                <Link to="/producto">
+                <Link to="/producto/1">
                 <button style={{ background: "green",
                                  border: "white 1px solid",
                                  borderRadius: "4px",

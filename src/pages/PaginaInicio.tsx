@@ -2,7 +2,6 @@ import Destacados from "../components/ComponenteDestacados";
 import CatalogoPrincipal from "../components/catalogo/ComponenteCatalogoPrincipal";
 // import CatalogoSecundario from "../components/catalogo/ComponenteCatSecundario";
 import Exploracion from "../components/ComponenteExploracion";
-import Informacion from "../components/texto/ComponenteInformacion";
 import BusquedaPrincipal from "../components/ComponenteBusquedaPrincipal";
 
 export default function PaginaInicio() {
@@ -28,18 +27,6 @@ export default function PaginaInicio() {
 
     <Exploracion />
 
-    {/* <--Informacion --> */}
-
-    <Informacion />                
-
-
-      {/* <ul>
-        {listaProductos.map((producto) => (
-          <li key={producto.id}>
-            {producto.nombre} - ${producto.precio}
-          </li>
-        ))}
-      </ul> */}
     </>
   );
 }

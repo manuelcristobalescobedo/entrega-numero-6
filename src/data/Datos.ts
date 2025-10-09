@@ -1,4 +1,4 @@
-import type { Producto, Usuario } from "/home/manuelcristobalescobedo/entrega-numero-6/src/types/Tipos.ts";
+import type { Producto, Usuario } from "../types/Tipos";
 
 export const productos: Producto[] = [
   {
