@@ -1,9 +1,15 @@
+import type { Producto } from "/home/manuelcristobalescobedo/entrega-numero-6/src/types/Tipos.ts";
 
+interface Props {
+  producto: Producto;
+}
 
-export default function Galeria() {
+export default function Galeria({ producto }: Props) {
+  if (!producto) return <div>Producto no disponible</div>;
+  if (!producto.imagenes || producto.imagenes.length === 0)
+    return <div>No hay imágenes disponibles</div>;
 
-   return (
-  <>
+  return (
     <div
       style={{
         display: "grid",
@@ -13,41 +19,22 @@ export default function Galeria() {
         marginBottom: "4rem",
       }}
     >
-      <div
-        style={{
-          backgroundImage: "url('/photos/Imagen1.jpg')",
-          width: "100%",
-          aspectRatio: "4 / 3",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          gridColumn: "1 / 3",
-          gridRow: "1 / 3",
-        }}
-      ></div>
-
-      <div
-        style={{
-          backgroundImage: "url('/photos/Imagen2.jpg')",
-          width: "100%",
-          aspectRatio: "4 / 3",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      ></div>
-
-      <div
-        style={{
-          backgroundImage: "url('/photos/Imagen3.jpg')",
-          width: "100%",
-          aspectRatio: "4 / 3",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      ></div>
+      {producto.imagenes.map((img: string, i: number) => (
+        <div
+          key={i}
+          style={{
+            backgroundImage: `url(${img})`,
+            width: "100%",
+            aspectRatio: "4 / 3",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            gridColumn: i === 0 ? "1 / 3" : undefined,
+            gridRow: i === 0 ? "1 / 3" : undefined,
+            borderRadius: "6px",
+          }}
+        />
+      ))}
     </div>
-  </>
-);
+  );
 }

@@ -1,20 +1,28 @@
+import type { Producto } from "../../types/Tipos";
 
+interface Props {
+  producto: Producto;
+}
 
-export default function TextoDescripcionDefault() {
+export default function TextoDescripcionDefault({ producto }: Props) {
+  // Si producto no está definido, mostramos un mensaje y salimos
+  if (!producto) return <div>Producto no disponible</div>;
 
+  // Calcular promedio de estrellas y cantidad de reseñas
+  const totalResenas = producto.resenas.length;
+  const promedioEstrellas =
+    totalResenas > 0
+      ? producto.resenas.reduce((acc, r) => acc + r.estrellas, 0) / totalResenas
+      : 0;
 
-    return (
-        <>
-            <div style={{color: "green"}}>
-                <h3>Título del ítem del catálogo</h3>
-                <p>Duración del ítem</p>
-                <p>Precio del ítem</p>
-                    <div>
-                        <p>★ 5</p>
-                        <p>(20 Reseñas)</p>
-                    </div>
-            </div>
-        
-        </>
-    )
+  return (
+    <div style={{ color: "green" }}>
+      <h3>{producto.titulo}</h3>
+      <p>Precio adulto: ${producto.precios.adulto}</p>
+      <div>
+        <p>★ {promedioEstrellas.toFixed(1)}</p>
+        <p>({totalResenas} Reseñas)</p>
+      </div>
+    </div>
+  );
 }

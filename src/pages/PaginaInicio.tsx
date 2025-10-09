@@ -1,6 +1,6 @@
 import Destacados from "../components/ComponenteDestacados";
 import CatalogoPrincipal from "../components/catalogo/ComponenteCatalogoPrincipal";
-import CatalogoSecundario from "../components/catalogo/ComponenteCatSecundario";
+// import CatalogoSecundario from "../components/catalogo/ComponenteCatSecundario";
 import Exploracion from "../components/ComponenteExploracion";
 import Informacion from "../components/texto/ComponenteInformacion";
 import BusquedaPrincipal from "../components/ComponenteBusquedaPrincipal";
@@ -22,7 +22,7 @@ export default function PaginaInicio() {
 
     {/* <-- Catalogo secundario --> */}
    
-    <CatalogoSecundario />
+    {/*<CatalogoSecundario />*/}
 
     {/* <-- Exploracion --> */}
 
@@ -30,7 +30,7 @@ export default function PaginaInicio() {
 
     {/* <--Informacion --> */}
 
-    <Informacion/>                
+    <Informacion />                
 
 
       {/* <ul>

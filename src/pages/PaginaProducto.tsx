@@ -1,48 +1,30 @@
-import React from "react"
-import Titulo from "../components/texto/ComponenteTitulo"
-import Galeria from "../components/ComponenteGaleria"
-import Descripción from "../components/ComponenteDescripcion"
-import Resenas from "../components/texto/ComponenteReseñas"
-import DisponibilidadCalendario from "../components/ComponenteDisponibilidad"
-import Informacion from "../components/texto/ComponenteInformacion"
+import { useParams } from "react-router-dom";
+import Titulo from "../components/texto/ComponenteTitulo";
+import Galeria from "../components/ComponenteGaleria";
+import Descripcion from "../components/ComponenteDescripcion";
+import Resenas from "../components/texto/ComponenteReseñas";
+import Informacion from "../components/texto/ComponenteInformacion";
+import { productos } from "../data/Datos";
 
 export default function PaginaProducto() {
+  const { productoId } = useParams<{ productoId: string }>(); // 🧩 importante
+  const producto = productos.find(p => p.id.toString() === productoId);
 
-    return (
-        <>
-            {/* <-- Principal --> */}
-        <section style={{padding: "6rem 6rem 0 6rem",
-                        background: "white",}}>
-            
-            {/* <--  Título  --> */}
-            <Titulo />
-            
-            {/* <--  Galería  --> */}
-            <Galeria />
+  if (!producto) return <div>Producto no disponible</div>;
 
-            {/* <--  Descripción  --> */}
-            <Descripción />
-        </section>
+  return (
+    <>
+      <section style={{ padding: "6rem 6rem 0 6rem", background: "white" }}>
+        <Titulo producto={producto} />
+        <Galeria producto={producto} />
+        <Descripcion producto={producto} />
+      </section>
 
-            {/* <--  Reseñas  --> */}
-        <section style={{padding: "6rem 6rem 0 6rem",
-                        background: "white",}}>
-            <Resenas />
-        </section>
+      <section style={{ padding: "6rem 6rem 0 6rem", background: "white" }}>
+        <Resenas producto={producto} />
+      </section>
 
-            {/* <--  DisponibilidadCalendario  --> */}
-        <section style={{padding: "6rem 6rem 0 6rem",
-                        background: "white",
-                        display: "grid",
-                        gridTemplateColumns: "1fr 1fr 1fr",
-                        gridTemplateRows: "rows",
-                        gap: "1rem"}}>
-            <DisponibilidadCalendario />
-
-        </section>
-
-            {/* <--  Informacion  --> */}
-
-            <Informacion />
-        </>
-    )};
+      <Informacion producto={producto} />
+    </>
+  );
+}

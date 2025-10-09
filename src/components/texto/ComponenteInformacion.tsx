@@ -1,11 +1,14 @@
+import type { Producto } from "../../types/Tipos";
 
+interface Props {
+  producto: Producto;
+}
 
-export default function Informacion() {
+export default function Informacion({ producto }: Props) {
+  if (!producto) return <div>Producto no disponible</div>;
 
-    return (
-  <>
+  return (
     <section
-      className="SeccionInformacion"
       style={{
         padding: "6rem",
         background: "white",
@@ -16,52 +19,24 @@ export default function Informacion() {
         lineHeight: "1.6",
       }}
     >
-      {/* Columna 1 */}
       <div style={{ maxWidth: "60ch" }}>
         <h4>En qué consiste</h4>
-        <ol>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Curabitur pretium nibh erat, a luctus ante eleifend nec.</li>
-          <li>Aenean condimentum velit facilisis ex ultrices commodo.</li>
-          <li>In sodales odio sit amet orci facilisis, eget egestas diam blandit.</li>
-        </ol>
+        <p>{producto.descripcion}</p>
 
         <h4>Más información</h4>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Curabitur pretium nibh erat, a luctus ante eleifend nec.</li>
-          <li>Aenean condimentum velit facilisis ex ultrices commodo.</li>
-          <li>In sodales odio sit amet orci facilisis, eget egestas diam blandit.</li>
-        </ul>
+        <p>{producto.informacion}</p>
       </div>
 
-      {/* Columna 2 */}
       <div>
         <h4>Políticas de cancelación y modificación</h4>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Curabitur pretium nibh erat, a luctus ante eleifend nec.</li>
-          <li>Aenean condimentum velit facilisis ex ultrices commodo.</li>
-          <li>In sodales odio sit amet orci facilisis, eget egestas diam blandit.</li>
-        </ul>
+        <p>{producto.cancelacion}</p>
 
         <h4>Qué está incluido</h4>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Curabitur pretium nibh erat, a luctus ante eleifend nec.</li>
-          <li>Aenean condimentum velit facilisis ex ultrices commodo.</li>
-          <li>In sodales odio sit amet orci facilisis, eget egestas diam blandit.</li>
-        </ul>
+        <p>{producto.incluye}</p>
 
         <h4>Qué no está incluido</h4>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Curabitur pretium nibh erat, a luctus ante eleifend nec.</li>
-          <li>Aenean condimentum velit facilisis ex ultrices commodo.</li>
-          <li>In sodales odio sit amet orci facilisis, eget egestas diam blandit.</li>
-        </ul>
+        <p>{producto.excluye}</p>
       </div>
     </section>
-  </>
-);
+  );
 }

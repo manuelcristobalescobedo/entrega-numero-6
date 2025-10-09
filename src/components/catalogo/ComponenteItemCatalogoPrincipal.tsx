@@ -1,87 +1,27 @@
 import { Link } from "react-router-dom";
 import TextoDescripcionDefault from "../texto/ComponenteTextoPlaceholder";
-export default function ItemCatalogoPrincipal() {
+import type { Producto } from "../../types/Tipos";
 
-    return (
-        <>
-        <Link to="/producto">
-            <div style={{ backgroundImage: "url(/photos/Imagen1.jpg)",
-                          borderRadius: "7px",
-                          width: "100%",
-                          aspectRatio: "1/1",
-                          backgroundPosition: "center center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                          marginBottom: "1.5rem",
-            }}></div>
-            <TextoDescripcionDefault />
-        </Link>
+interface Props {
+  producto: Producto;
+}
 
-        <Link to="/producto">
-            <div style={{ backgroundImage: "url(/photos/Imagen2.jpg)",
-                          borderRadius: "7px",
-                          width: "100%",
-                          aspectRatio: "1/1",
-                          backgroundPosition: "center center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                          marginBottom: "1.5rem",
-                
-             }}></div>
-            <TextoDescripcionDefault />
-        </Link>
-
-        <Link to="/producto">
-            <div style={{ backgroundImage: "url(/photos/Imagen3.jpg)",
-                          borderRadius: "7px",
-                          width: "100%",
-                          aspectRatio: "1/1",
-                          backgroundPosition: "center center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                          marginBottom: "1.5rem",
-             }}></div>
-            <TextoDescripcionDefault />
-        </Link>
-
-        <Link to="/producto">
-            <div style={{ backgroundImage: "url(/photos/Imagen4.jpg)",
-                          borderRadius: "7px",
-                          width: "100%",
-                          aspectRatio: "1/1",
-                          backgroundPosition: "center center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                          marginBottom: "1.5rem",
-             }}></div>
-            <TextoDescripcionDefault />
-        </Link>
-
-        <Link to="/producto">
-            <div style={{ backgroundImage: "url(/photos/Imagen5.jpg)",
-                          borderRadius: "7px",
-                          width: "100%",
-                          aspectRatio: "1/1",
-                          backgroundPosition: "center center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                          marginBottom: "1.5rem",
-             }}></div>
-            <TextoDescripcionDefault />
-        </Link>
-
-        <Link to="/producto">
-            <div style={{ backgroundImage: "url(/photos/Imagen6.jpg)",
-                          borderRadius: "7px",
-                          width: "100%",
-                          aspectRatio: "1/1",
-                          backgroundPosition: "center center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                          marginBottom: "1.5rem",
-             }}></div>
-            <TextoDescripcionDefault />
-        </Link>
-    </>
-);
+export default function ItemCatalogoPrincipal({ producto }: Props) {
+  return (
+    <Link to={`/producto/${producto.id}`}>
+      <div
+        style={{
+          backgroundImage: `url(${producto.imagenes[0]})`,
+          borderRadius: "7px",
+          width: "100%",
+          aspectRatio: "1/1",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          marginBottom: "1.5rem",
+        }}
+      ></div>
+      <TextoDescripcionDefault producto={producto} />
+    </Link>
+  );
 }

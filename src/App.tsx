@@ -15,7 +15,7 @@ function App() {
         {/*<-- estos son los children de LayoutPrimario --> */}
 
         <Route index element={<PaginaInicio />} />
-        <Route path="Producto" element={<PaginaProducto/>} />    
+        <Route path="producto/:productoId" element={<PaginaProducto />} />
         <Route path="Catalogo" element={<PaginaCatalogo/>} />
         </Route>
       </Routes>
